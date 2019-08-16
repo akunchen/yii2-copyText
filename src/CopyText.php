@@ -13,6 +13,27 @@ use yii\helpers\ArrayHelper;
 
 /**
  * copy text to your clipboard
+ *
+ * use like this
+ * <?php
+ *      echo beark\copy\CopyText::widget([
+ *          'text' => 'something to copy',
+ *          'button' => 'copy'
+ *      ]);
+ * ?>
+ *
+ * full config like this
+ * <?php
+ *      echo beark\copy\CopyText::widget([
+ *          'text' => [
+ *              'msg' => 'something to copy',
+ *              'tag' => 'span',
+ *              'options' => []
+ *          ],
+ *          'copiedText' => '已复制!',
+ *          'button' => 'copy'
+ *      ]);
+ * ?>
  */
 class CopyText extends Widget
 {
@@ -32,6 +53,11 @@ class CopyText extends Widget
      * @see Html::tag
      */
     public $text;
+
+    /**
+     * @var string $copiedText 点击复制按钮后显示的文字
+     */
+    public $copiedText = '已复制!';
 
     /**
      * the config the same as text
@@ -151,7 +177,7 @@ class CopyText extends Widget
         
         copyText(target.parent().find('.js-copy-target').text());
         var text = target.text();
-        target.text('已复制!');
+        target.text('{$this->copiedText}');
         target.copyTextTask = setTimeout(function() {
             target.text(text);
             target.copyTextTask = null;    

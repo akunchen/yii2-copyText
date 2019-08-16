@@ -2,7 +2,7 @@
   "name": "akun/yii2-copy-text",
   "description": "yii2 copy-text",
   "type": "library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "require": {
     "php": ">=7.0.0",
