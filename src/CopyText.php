@@ -11,6 +11,9 @@ use yii\bootstrap\Html;
 use yii\bootstrap\Widget;
 use yii\helpers\ArrayHelper;
 
+/**
+ * copy text to your clipboard
+ */
 class CopyText extends Widget
 {
     /**
