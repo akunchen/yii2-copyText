@@ -1,0 +1,22 @@
+{
+  "name": "akun/yii2-copy-text",
+  "description": "yii2 copy-text",
+  "type": "library",
+  "version": "0.0.1",
+  "require": {
+    "php": ">=7.0.0",
+    "yiisoft/yii2": "^2.0",
+    "yiisoft/yii2-bootstrap": "~2.0.0"
+  },
+  "authors": [
+    {
+      "name": "阿坤",
+      "email": "1090093077@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "beark\\copy\\": "src/"
+    }
+  }
+}
